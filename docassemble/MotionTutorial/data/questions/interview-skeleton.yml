@@ -1,25 +1,68 @@
 ---
 metadata:
   title: |
-    Skilled Migrant Category
+    Work Visa - Essential Skills
   short title: |
-    EOI questionnaire
+    Application questionnaire
   description: |
-    This interview helps you file a motion to dismiss.
+    Questions and information required
   authors:
     - name: Michael Yoon
       organization: MY Law
-  revision_date: 2018-03-23
+  revision_date: 2018-12-10
+---
+question: |
+  What is your name?
+fields:
+  - Title: title
+    choices:
+    - Mr
+    - Mrs
+    - Ms
+    - Miss
+    - Dr
+  - First name: first_name
+  - Middle names: middle_names
+    required: false
+  - Last name: last_name
+  - Other names you have been known by: other_names
+    required: false
+---
+question: |
+  What is your gender?
+field: user_gender
+buttons:
+  - Male: Male
+  - Female: Female
+---
+question: |
+  What is your date of birth?
+fields:
+  - Birthdate: dob
+    datatype: date
+---
+question: |
+  Where were you born?
+fields: 
+  - Country: birth_country
+  - Province/state/region: birth_province
+  - City/town: birth_city
+---
+question: |
+  Your passport details
+fields:
+  - Passport number: passport_number
+  - Country of passport: passport_country
+  - Expiry date: passport_expiry
+    datatype: date
 ---
 mandatory: True
 question: |
   Your documents are ready. Please print and file!
 subquestion: |
-  Hello, Download. The answer is ${answer}.
+  Hello, Download.
 attachment:
-  - name: Motion To Dismiss
-    filename: Motion to Dismiss
-    docx template file: Motion to Dismiss-Original.docx
+  - name: Work Visa - Essential Skills
+    filename: Work Visa - Essential Skills
+    docx template file: Work_visa_essential_skills.docx
 ---
-code: |
-  answer = 2 + 2
